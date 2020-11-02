@@ -25,4 +25,4 @@ jobs:
       - run: npm install -g yarn
       - run: yarn install --frozen-lockfile
       - run: yarn --silent reg-suit sync-expected 2>&1 | tee stdout.txt
-      - run: grep -v 'key is null' stdout.txt
+      - run: tail -n 1 stdout.txt | grep -v 'key is null'
