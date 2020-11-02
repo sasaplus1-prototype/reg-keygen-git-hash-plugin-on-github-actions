@@ -27,7 +27,7 @@ jobs:
       - if: github.event_name == 'push'
         run: |
           git fetch && git checkout "${GITHUB_REF#refs/heads/}"
-      - if: github.event_name == 'pull_request'
+      - if: github.event_name == 'pull_request' || github.event_name == 'pull_request_target'
         env:
           REF: ${{ github.head_ref }}
         run: |
