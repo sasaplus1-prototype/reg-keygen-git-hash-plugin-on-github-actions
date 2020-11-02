@@ -1,3 +1,7 @@
 {
-  "private": true
+  "private": true,
+  "devDependencies": {
+    "reg-keygen-git-hash-plugin": "^0.10.8",
+    "reg-suit": "^0.10.8"
+  }
 }
